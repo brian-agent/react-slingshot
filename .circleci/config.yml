@@ -1,21 +1,21 @@
 versions: 2.1
 
 jobs:
-  Build:
+  build:
     docker:
       image: -circleci/node:13.8.0
     steps:
       - checkout
       - run: npm i
       - run: npm run lint
-  Test:
+  test:
     docker:
       image: -circleci/node:13.8.0
     steps:
       - checkout
       - run: npm i
       - run: npm run test
-  Analyze:
+  analyze:
     docker:
       image: -circleci/node:13.8.0
     steps:
